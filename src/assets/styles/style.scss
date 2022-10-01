@@ -15,9 +15,27 @@ body {
    background: #181818;
    color: $white;
    font-size: 1.4rem;
+   font-weight: 400;
    font-family: 'Roboto', sans-serif;
 }
 
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+//assets
+@import "button";
+
+//blocks
 @import "blocks/header";
 @import "blocks/sidebar";
 @import "blocks/main";
