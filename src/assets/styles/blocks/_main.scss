@@ -7,3 +7,44 @@
       padding: 0 5rem;
    }
 }
+
+.storis {
+   display: grid;
+   grid-template-columns: repeat(4, 4fr);
+   grid-template-rows: 140px;
+   grid-column-gap: 15px;
+
+   &__item {
+      width: 140px;
+      height: 195px;
+      overflow: hidden;      
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+   }
+
+   &__img {
+      &--fix {
+         transform: translate(-15px, -10px);
+      }
+   }
+
+   &__title,
+   &__date {
+      color: $white;
+      font-size: 1.2rem;
+      position: absolute;
+   }
+
+   &__title {
+      top: 15px;
+      left: 12px;
+   }
+
+   &__date {
+      bottom: 14px;
+      right: 17px;
+   }
+}
+
+
