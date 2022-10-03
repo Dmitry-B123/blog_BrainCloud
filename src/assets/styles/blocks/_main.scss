@@ -1,6 +1,7 @@
 .main {
    padding-left: $sidebar-width;
    padding-top: 10rem;
+
    .container {
       max-width: 70rem;
       margin: 0 auto;
@@ -8,22 +9,30 @@
    }
 }
 
+//storis
 .storis {
    display: grid;
    grid-template-columns: repeat(4, 4fr);
-   grid-template-rows: 140px;
-   grid-column-gap: 15px;
+   grid-template-rows: 19.5rem;
+   column-gap: 15px;
+   margin-bottom: 4rem;
 
    &__item {
-      width: 140px;
-      height: 195px;
       overflow: hidden;      
       border-radius: 10px;
       position: relative;
       cursor: pointer;
+
+      &:hover {
+         .storis__img {
+            transform: scale(1.5);
+         }
+      }
    }
 
    &__img {
+      transition: transform 2s ease-in-out;
+
       &--fix {
          transform: translate(-15px, -10px);
       }
@@ -45,6 +54,78 @@
       bottom: 14px;
       right: 17px;
    }
+}
+
+// add-post
+.add-post {
+   padding: 1.5rem 2rem;
+   margin-bottom: 3rem;
+
+   background-color: $secondary;
+   border-radius: 5px;
+   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.45);
+
+   &__form {
+      display: flex;
+      align-items: center;
+   }
+
+   &__textarea {
+      width: 80%;
+      background: transparent;
+      resize: none;
+      border: none;
+      color: $white;
+      padding-top: 15px;
+
+      &:focus {
+         outline: none ;
+      }
+
+      &::placeholder {
+         color: $white;
+         font-family: inherit;
+         font-size: 1.5rem;
+      }
+   }
+
+   &__form-action {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+
+      .add-post__file,
+      .add-post__send {
+         display: block;
+         width: 4.4rem;
+         height: 4.4rem;
+         border-radius: 50%;
+         border: none; 
+         cursor: pointer;
+         transition: background-color 0.5s linear;
+
+         .add-post__input {
+            display: none;
+         }
+      }
+
+      .add-post__file {
+         background: #EBEBEB url('../images/main/posts/photo.svg') no-repeat center;
+
+         &:hover {
+            background-color: darken(#EBEBEB, 20%);
+         }
+      }
+
+      .add-post__send {
+         background: #3137C9 url('../images/main/posts/send.svg') no-repeat center;
+
+         &:hover {
+            background-color: darken(#3137C9, 20%);
+         }
+      }
+   }
+
 }
 
 
