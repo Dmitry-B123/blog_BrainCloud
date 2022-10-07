@@ -1,0 +1,48 @@
+.related {
+   padding: 3rem 0 0.5rem;
+
+   border-bottom: 1px solid #1C1C1C;
+
+   &__title {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $white;
+      margin: 0 0 1.5rem;
+      padding: 0;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      width: 50%;
+      margin-bottom: 2.5rem;
+   }
+
+   &__list-title {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: #F3EBA2;
+      margin: 0;
+      margin-bottom: 5px;
+
+      // обрезка текста
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      a {
+         color: inherit;
+      }
+   }
+
+   &__list-data {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: #828282;
+   }
+}

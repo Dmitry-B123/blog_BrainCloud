@@ -31,4 +31,8 @@
          background-color: darken($blue, 15%);
       }
    }
+
+   &--bordrad {
+      border-radius: 0.5rem;
+   }
 }
