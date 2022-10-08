@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Описание страницы для поисковых систем">
+   <meta name="keywords" content="Наиболее важные ключевые слова страницы для поисковых систем">
+   <title>Blog</title>
+   <link rel="shortcut icon" href="" type="image/x-icon">
+   <link rel="stylesheet" href="assets/styles/main.min.css">
+</head>
+
+<body>
+   <div class="page">
+      @import "header.html"
+      @import "aside.html"
+      <main class="main">
+         <div class="container">
+            <div class="page__title page__title--center">
+               Вход
+            </div>
+
+            <form action="/" method="post" class="form form--auth">
+               <div class="form__group form__group--md">
+                  <input class="form__control form__control--textarea" type="email" placeholder="Ваш email"
+                     value="alex.provo@mail.com"></input>
+                  <span class="form__line"></span>
+               </div>
+
+               <div class="form__group form__group--md">
+                  <input class="form__control form__control--textarea" type="password" placeholder="Пароль"></input>
+                  <span class="form__line"></span>
+               </div>
+
+               <div class="form__footer form__footer--center">
+                  <button class="btn btn--blue btn--bordrad" type="button">Сохранить</button>
+
+                  <ul class="form__footer-list">
+                     <li class="form__footer-item"><a href="signup.html" class="form__footer-link">восстановить</a></li>
+                     <li class="form__footer-item"><a href="singin.html" class="form__footer-link">регистрация</a></li>
+                  </ul>
+               </div>
+            </form>
+         </div>
+      </main>
+      @import "footer.html"
+   </div>
+   <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

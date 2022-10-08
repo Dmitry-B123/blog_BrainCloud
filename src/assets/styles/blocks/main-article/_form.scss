@@ -1,0 +1,63 @@
+.form {
+   margin-bottom: 5rem;
+
+   &--auth {
+      max-width: 30rem;
+      margin: 0 auto;
+      margin-top: 5rem;
+   }
+
+   &__group {
+      position: relative;
+      margin-bottom: 2rem;
+
+      &--md {
+         margin-bottom: 2.5rem;
+      }
+   }
+   
+   &__control {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+      border: none;
+      background: transparent;
+      color: $white;
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-family: inherit;
+      padding: 0.5rem 0 0.75rem;
+      border-bottom: 1px solid #3F3F3F;
+
+      &:focus + .form__line {
+         width: 100%;
+      }
+
+      &--textarea {
+         height: 30px;
+         resize: none;
+         overflow: hidden;
+      }
+
+      &::placeholder {
+         color: rgba( $white , 0.2);
+      }
+   }
+
+   &__line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $blue;
+   }
+
+
+   &__footer {
+      &--center {
+         text-align: center;
+      }
+   }
+}
