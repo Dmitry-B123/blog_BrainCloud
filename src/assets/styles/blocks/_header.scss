@@ -10,15 +10,33 @@
    top: 0;
    right: 0;
    z-index: $z-index-header;
+
+   @include breakpoint($tablet-bp) {
+      width: 100%;
+   }
 }
 
 .header__right {
    width: 60%;
+
+   @include breakpoint($tablet-bp) {
+      width: 30%;
+   }
 }
 
 .nav {
+
+   @include breakpoint($tablet-bp) {
+      display: none;
+   }
+
    &__list {
       display: flex;
+
+      @include breakpoint($tablet-bp) {
+         flex-direction: column;
+         padding-left: 1rem;
+      }
    }
    
    &__item {
@@ -33,6 +51,20 @@
             display: block;
          }
       }
+
+      @include breakpoint($tablet-bp) {
+         background-color: transparent; 
+
+         &:hover {
+            .nav__link {
+               background-color: transparent;
+            }
+         }   
+      }
+
+      @media screen and (max-width: 350px) {
+         max-width: 85%;
+      }
    }
 
    &__link {
@@ -43,6 +75,10 @@
       font-size: 1.1rem;
       text-transform: uppercase;
       transition: background-color 0.2s linear;
+
+      @include breakpoint($tablet-bp) {
+         font-size: 1.5rem;
+      }
 
       &:hover {
          background-color: $blue;
@@ -68,6 +104,14 @@
    } 
 }
 
+.nav--mobile {
+   display: none;
+
+   @include breakpoint($tablet-bp) {
+      display: block;
+   }
+}
+
 .subnav {
    display: none;
    width: 16.5rem;
@@ -78,6 +122,18 @@
    position: absolute;
    top: 100%;
    left: 0;
+
+   @include breakpoint($tablet-bp) {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+   }
+
+   &__item {
+      @include breakpoint($tablet-bp) {
+         padding: 1rem;
+      }
+   }
 
    &__link {
       color: $white;
@@ -96,6 +152,10 @@
    width: 40%;
    display: flex;
    justify-content: flex-end;
+
+   @include breakpoint($tablet-bp) {
+      width: 70%;
+   }
    
    .search {
       background-color: $primary;
@@ -116,6 +176,11 @@
          
          &::placeholder {
             color: rgba($white, 0.4);
+         }
+
+         @include breakpoint($tablet-bp) {
+            font-size: 1.6rem;
+            height: 4rem;
          }
       }
    }

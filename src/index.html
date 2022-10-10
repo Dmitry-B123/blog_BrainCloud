@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="assets/styles/main.min.css">
 </head>
 
-<body>
+<body class="no-scroll">
    <div class="page">
       @import "header.html"
       @import "aside.html"
@@ -23,8 +23,12 @@
             @import "main/posts.html"
          </div>
       </main>
-      @import "footer.html"
    </div>
+
+   @import "modals/story-modal.html"
+   @import "modals/share-modal.html"
+   @import "modals/contact-modal.html"
+
    <script src="assets/js/main.min.js"></script>
 </body>
 

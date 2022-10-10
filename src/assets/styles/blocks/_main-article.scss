@@ -7,6 +7,10 @@
    border: 1px solid #000000;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 5px;
+
+   @include breakpoint($mobile-bp) {
+      padding: 1.5rem;
+   }
    
    &__header {
       &--preview {
@@ -46,8 +50,8 @@
          }
       }
 
-      &--mb0 {
-         margin-bottom: 0;
+      &--mb-open {
+         margin-bottom: 0.75rem;
       }
    }
 
@@ -58,7 +62,12 @@
 
    &__footer {
       display: flex;
-      justify-content: space-between;  
+      justify-content: space-between;
+      
+      @include breakpoint($mobile-bp) {
+         flex-direction: column;
+         align-items: start;
+      }
    }
 
    &__data {
@@ -68,12 +77,20 @@
       color: #828282;
       line-height: 1.2;
 
+      @include breakpoint($mobile-bp) {
+         font-size: 1.25rem;
+      }
+
       &-link {
          margin-left: 3.5rem;
          position: relative; 
          color: #828282;
          font-size: 1.4rem;
          line-height: 1.6;
+
+         @include breakpoint($mobile-bp) {
+            font-size: 1.25rem;
+         }
 
          &::before {
             content: "";

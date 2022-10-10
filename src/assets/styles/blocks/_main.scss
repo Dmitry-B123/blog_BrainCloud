@@ -2,10 +2,19 @@
    padding-left: $sidebar-width;
    padding-top: 10rem;
 
+   @include breakpoint($tablet-bp) {
+      padding-left: 0;
+      padding-top: 7rem;
+   }
+
    .container {
       max-width: 70rem;
       margin: 0 auto;
       padding: 0 5rem;
+
+      @include breakpoint($mobile-bp) {
+         padding: 0 1.5rem;
+      }
    }
 }
 
@@ -16,6 +25,11 @@
    grid-template-rows: 19.5rem;
    column-gap: 15px;
    margin-bottom: 4rem;
+
+   @include breakpoint($mobile-bp) {
+      grid-template-columns: repeat(4, 15rem);
+      overflow: auto;
+   }
 
    &__item {
       overflow: hidden;      
@@ -71,12 +85,13 @@
    }
 
    &__textarea {
-      width: 80%;
+      flex-grow: 1;
       background: transparent;
       resize: none;
       border: none;
       color: $white;
       padding-top: 15px;
+      overflow: hidden;
 
       &:focus {
          outline: none ;
@@ -92,7 +107,12 @@
    &__form-action {
       display: flex;
       justify-content: space-between;
-      width: 20%;
+      width: 10rem;
+      flex-shrink: 0;
+
+      @include breakpoint(350px) {
+         width: 7rem;
+      }
 
       .add-post__file,
       .add-post__send {
@@ -103,6 +123,11 @@
          border: none; 
          cursor: pointer;
          transition: background-color 0.5s linear;
+
+         @include breakpoint(350px) {
+            width: 3rem;
+            height: 3rem;
+         }
 
          .add-post__input {
             display: none;

@@ -1,0 +1,7 @@
+@mixin breakpoint ($br) {
+
+   @media screen and (max-width: $br) {
+      @content;
+   }
+   
+}
