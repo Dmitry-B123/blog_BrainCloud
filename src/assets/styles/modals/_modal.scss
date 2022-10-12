@@ -8,10 +8,13 @@
    height: 100%;
    background: rgba( $primary , 0.9);
    z-index: $z-index-modal;
-   // display: flex;
    display: none;
    justify-content: center;
    align-items: center;
+
+   &.show {
+      display: flex;
+   }
 }
 
 .modal__contact {
@@ -22,6 +25,15 @@
    max-width: 50rem;
    padding: 8rem 8rem 2.5rem;
    position: relative;
+
+   @include breakpoint($mobile-bp) {
+      padding: 4rem 4rem 2.5rem;
+   }
+}
+
+.modal__contact--story {
+   max-width: 30rem;
+   min-height: 40rem;
 }
 
 .modal__footer {
@@ -32,6 +44,10 @@
       font-size: 1.2rem;
       line-height: 1.6rem;
       
+      @include breakpoint($mobile-bp) {
+         flex-direction: column;
+         margin-bottom: 1rem;
+      }
    }
 
    &-item {
@@ -69,3 +85,7 @@
       padding: 1rem;
    }
 }
+
+// .share--modal{
+//    display: block;
+// }

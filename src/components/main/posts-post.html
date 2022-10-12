@@ -1,7 +1,7 @@
 <article class="post">
    <div class="post__action">
       <a href="index.html" class="post__action-link">вернуться назад</a>
-      <a href="" class="post__action-link">
+      <a href="" class="post__action-link" data-modal="share-modal">
          поделиться<img src="assets/images/main/posts-post/share.svg" alt="">
       </a>
    </div>
@@ -81,7 +81,8 @@
       <h3 class="discus__title">Обсуждение</h3>
       <form action="/" method="post" class="form">
          <div class="form__group">
-            <textarea class="form__control form__control--textarea" placeholder="Текст комментария"></textarea>
+            <textarea class="form__control form__control--textarea" placeholder="Текст комментария"
+               data-autoresize></textarea>
             <span class="form__line"></span>
          </div>
          <button class="btn btn--blue btn--bordrad" type="button">Отправить</button>
